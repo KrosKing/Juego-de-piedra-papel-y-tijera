@@ -1,0 +1,48 @@
+import random
+while  True:
+    a=random.randrange(0, 3)
+    print("Bienvenido al juego de piedra, papel o tijera, estas listo?")
+    print("1. Piedra")
+    print("2. Papel")
+    print("3. Tijera")
+    opcion2 = ""
+    Usuario=int(input("Digita el numero de tu opcion: "))
+    if Usuario == 1:
+        opcion= "Piedra"
+    elif Usuario == 2:
+        opcion= "Papel"
+    elif Usuario == 3:
+        opcion= "Tijera"
+    else:
+        print("Elige una opcion existente")
+
+    print("Tiraste",opcion)
+    
+    if a == 0:
+        opcion2= "Piedra"
+    elif a == 1:
+        opcion2= "Papel"
+    elif a == 2:
+        opcion2= "Tijera"
+
+    print("El bot tiro",opcion2)
+    print("El resultado es....")
+
+    if opcion == "Piedra" and opcion2== "Papel":
+        print("El bot a sido el ganador, Papel envuelve a Piedra")
+    elif opcion == "Papel" and opcion2== "Tijera":
+        print("El bot es el ganador, Tijera corta a Papel")
+    elif opcion == "Tijera" and opcion2 == "Piedra":
+        print("El bot es el ganador, Piedra rompe a Tijera")
+
+    if opcion2 == "Tijera" and opcion == "Piedra":
+        print("Ganaste, Piedra rompe a tijera")
+    elif opcion2 == "Papel" and opcion== "Tijera":
+        print("Ganaste, Tijera corta a Papel")
+    elif opcion2== "Piedra" and opcion=="Papel":
+        print("Ganaste, Papel envuelve a piedra")
+    elif opcion==opcion2:
+        print("ES UN EMPATE")
+    Repetir= input("Quieres jugar de nuevo?, pon s para continuar de lo contrario pon n: ")
+    if Repetir.lower() != "s":
+        break 
